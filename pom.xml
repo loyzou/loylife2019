@@ -12,6 +12,7 @@
     <artifactId>loylife</artifactId>
     <version>1.0.0</version>
     <name>loylife</name>
+    <packaging>pom</packaging>
     <description>loy project for Spring Boot</description>
 
     <properties>
