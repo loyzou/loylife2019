@@ -11,6 +11,11 @@ public class LoyParam implements Serializable {
     private String method;
     private Map<String,Object> attr;
 
+    public LoyParam(String serviceName, String method) {
+        this.serviceName = serviceName;
+        this.method = method;
+    }
+
     public String getServiceName() {
         return serviceName;
     }

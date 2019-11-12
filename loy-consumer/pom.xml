@@ -30,7 +30,7 @@
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
 
-        <!--api 此处可以不适用该api-->
+        <!--api-->
         <dependency>
             <groupId>org.loy</groupId>
             <artifactId>loy-api</artifactId>

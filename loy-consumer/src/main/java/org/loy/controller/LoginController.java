@@ -1,6 +1,7 @@
 package org.loy.controller;
 
-import org.loy.api.user.IUserApi;
+import org.loy.api.ILoyApi;
+import org.loy.common.context.LoyParam;
 import org.loy.common.context.LoyResult;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,8 +13,8 @@ public class LoginController extends BaseController {
 
     @RequestMapping("login")
     public LoyResult login(){
-        LoyResult loyResult = new LoyResult();
-        loyResult.setSuccess(false);
+        LoyParam loyParam = new LoyParam("customerService", "login");
+        LoyResult loyResult = iLoyApi.login(loyParam);
         return loyResult;
     }
 
