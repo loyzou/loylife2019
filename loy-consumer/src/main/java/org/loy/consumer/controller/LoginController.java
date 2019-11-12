@@ -1,4 +1,4 @@
-package org.loy.loylife.controller;
+package org.loy.consumer.controller;
 
 import org.loy.common.context.LoyResult;
 import org.springframework.web.bind.annotation.RequestMapping;

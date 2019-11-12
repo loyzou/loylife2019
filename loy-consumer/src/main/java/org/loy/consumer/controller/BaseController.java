@@ -1,4 +1,4 @@
-package org.loy.loylife.controller;
+package org.loy.consumer.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpRequest;
