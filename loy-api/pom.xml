@@ -9,34 +9,26 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.loy</groupId>
-    <artifactId>loy-consumer</artifactId>
+    <artifactId>loy-api</artifactId>
     <version>1.0.0</version>
-    <name>loy-consumer</name>
-    <description>consumer project for Spring Boot</description>
+    <name>loy-api</name>
+    <description>api project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-netflix-eureka-client</artifactId>
-        </dependency>
 
-        <!-- feign -->
+        <dependency>
+            <groupId>org.loy</groupId>
+            <artifactId>loy-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-
-        <!--api 此处可以不适用该api-->
-        <dependency>
-            <groupId>org.loy</groupId>
-            <artifactId>loy-api</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-
     </dependencies>
 
     <build>

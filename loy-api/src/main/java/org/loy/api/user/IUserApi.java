@@ -5,7 +5,7 @@ import org.loy.common.context.LoyResult;
 import org.springframework.cloud.openfeign.FeignClient;
 
 @FeignClient(name = "${provider.loy.name}")
-public interface UserApi {
+public interface IUserApi {
     /***
      * 登录
      * @param params
