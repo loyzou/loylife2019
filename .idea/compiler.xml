@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="loy-consumer" />
+        <module name="loy-provider" />
+        <module name="loy-common" />
+        <module name="loy-eureka" />
+        <module name="loy-api" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="loy-api" target="1.8" />
+      <module name="loy-common" target="1.8" />
+      <module name="loy-consumer" target="1.8" />
+      <module name="loy-eureka" target="1.8" />
+      <module name="loy-provider" target="1.8" />
+      <module name="loylife" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="loy-api" options="-parameters" />
+      <module name="loy-common" options="-parameters" />
+      <module name="loy-consumer" options="-parameters" />
+      <module name="loy-eureka" options="-parameters" />
+      <module name="loy-provider" options="-parameters" />
+    </option>
+  </component>
+</project>

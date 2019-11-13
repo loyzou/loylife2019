@@ -7,9 +7,16 @@ import org.springframework.cloud.openfeign.FeignClient;
 @FeignClient(name = "${provider.loy.name}")
 public interface ILoyApi {
     /***
-     * 登录
+     * 远程无事务调用
      * @param params
      * @return
      */
-    LoyResult login(LoyParam params);
+    LoyResult callNoTx(LoyParam params);
+
+    /***
+     * 远程有事务调用
+     * @param params
+     * @return
+     */
+    LoyResult call(LoyParam params);
 }

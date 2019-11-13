@@ -9,9 +9,9 @@
         <relativePath />
     </parent>
     <groupId>org.loy</groupId>
-    <artifactId>loylife</artifactId>
+    <artifactId>loy-life</artifactId>
     <version>1.0.0</version>
-    <name>loylife</name>
+    <name>loy-life</name>
     <packaging>pom</packaging>
     <description>loy project for Spring Boot</description>
 
@@ -20,36 +20,22 @@
         <spring.cloud-version>Greenwich.SR1</spring.cloud-version>
     </properties>
 
+    <modules>
+        <module>loy-common</module>
+        <module>loy-api</module>
+        <module>loy-consumer</module>
+        <module>loy-provider</module>
+        <module>loy-eureka</module>
+
+    </modules>
+
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <!-- 引入公共包 -->
-      <dependency>
-            <groupId>org.loy</groupId>
-            <artifactId>loy-common</artifactId>
-            <version>1.0.0</version>
-        </dependency>
-
-
-
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <optional>true</optional>
         </dependency>
     </dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-        </plugins>
-    </build>
 
     <dependencyManagement>
         <dependencies>
