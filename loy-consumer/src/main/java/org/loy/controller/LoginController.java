@@ -15,8 +15,8 @@ public class LoginController{
 
     @RequestMapping("login")
     public LoyResult login(){
-        LoyParam loyParam = new LoyParam("customerService", "login");
-        LoyResult loyResult = iLoyApi.call(loyParam);
+        LoyParam loyParam = new LoyParam("userService", "login");
+        LoyResult loyResult = iLoyApi.callNoTx(loyParam);
         return loyResult;
     }
 

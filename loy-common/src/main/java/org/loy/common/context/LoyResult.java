@@ -9,6 +9,12 @@ public class LoyResult implements Serializable {
 
     }
 
+    public String message;
+
+    private boolean isSuccess = true;
+
+    private List<Map<String,Object>> rows;
+
     public boolean isSuccess() {
         return isSuccess;
     }
@@ -25,9 +31,11 @@ public class LoyResult implements Serializable {
         this.rows = rows;
     }
 
-    private boolean isSuccess;
+    public String getMessage() {
+        return message;
+    }
 
-    private List<Map<String,Object>> rows;
-
-
+    public void setMessage(String message) {
+        this.message = message;
+    }
 }

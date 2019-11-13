@@ -10,7 +10,6 @@
         <module name="loy-eureka" />
         <module name="loy-api" />
         <module name="loy-provider" />
-        <module name="loy-prod" />
         <module name="loy-common" />
       </profile>
     </annotationProcessing>
