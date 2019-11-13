@@ -15,9 +15,9 @@ import org.springframework.context.annotation.ComponentScan;
 public class LoyProviderApplication {
 
     public static void main(String[] args) {
-        log.info("=========loy provider run start==========");
+        log.info("=========loy provider run start===============");
         SpringApplication.run(LoyProviderApplication.class, args);
-        log.info("=========loy provider run success=========");
+        log.info("=========loy provider run success===============");
     }
 
 }

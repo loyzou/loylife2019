@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/loy-common/loy-common.iml" filepath="$PROJECT_DIR$/loy-common/loy-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/loy-consumer/loy-consumer.iml" filepath="$PROJECT_DIR$/loy-consumer/loy-consumer.iml" />
       <module fileurl="file://$PROJECT_DIR$/loy-eureka/loy-eureka.iml" filepath="$PROJECT_DIR$/loy-eureka/loy-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/loy-prod/loy-prod.iml" filepath="$PROJECT_DIR$/loy-prod/loy-prod.iml" />
       <module fileurl="file://$PROJECT_DIR$/loy-provider/loy-provider.iml" filepath="$PROJECT_DIR$/loy-provider/loy-provider.iml" />
       <module fileurl="file://$PROJECT_DIR$/loylife.iml" filepath="$PROJECT_DIR$/loylife.iml" />
     </modules>

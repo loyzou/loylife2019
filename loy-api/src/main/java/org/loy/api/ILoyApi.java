@@ -3,6 +3,7 @@ package org.loy.api;
 import org.loy.common.context.LoyParam;
 import org.loy.common.context.LoyResult;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @FeignClient(name = "${provider.loy.name}")
 public interface ILoyApi {
@@ -11,6 +12,7 @@ public interface ILoyApi {
      * @param params
      * @return
      */
+    @RequestMapping("/callNoTx")
     LoyResult callNoTx(LoyParam params);
 
     /***
@@ -18,5 +20,6 @@ public interface ILoyApi {
      * @param params
      * @return
      */
+    @RequestMapping("/call")
     LoyResult call(LoyParam params);
 }

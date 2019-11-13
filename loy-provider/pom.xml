@@ -12,7 +12,7 @@
     <artifactId>loy-provider</artifactId>
     <version>1.0.0</version>
     <name>loy-provider</name>
-    <description>loy provider project for Spring Boot</description>
+    <description>prod project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>
@@ -21,25 +21,28 @@
     <dependencies>
 
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>org.loy</groupId>
             <artifactId>loy-common</artifactId>
             <version>1.0.0</version>
         </dependency>
+
+
         <!--api-->
         <dependency>
             <groupId>org.loy</groupId>
             <artifactId>loy-api</artifactId>
             <version>1.0.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-netflix-eureka-client</artifactId>
         </dependency>
 
     </dependencies>
