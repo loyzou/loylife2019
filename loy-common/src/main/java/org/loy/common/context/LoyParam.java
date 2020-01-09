@@ -9,6 +9,7 @@ import java.util.Map;
 public class LoyParam implements Serializable {
     private String serviceName;
     private String method;
+    private String database;
     private Map<String,Object> attr;
 
     public LoyParam(String serviceName, String method) {
@@ -40,4 +41,11 @@ public class LoyParam implements Serializable {
         this.attr = attr;
     }
 
+    public String getDatabase() {
+        return database;
+    }
+
+    public void setDatabase(String database) {
+        this.database = database;
+    }
 }

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/loy-api/loy-api.iml" filepath="$PROJECT_DIR$/loy-api/loy-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/loy-common/loy-common.iml" filepath="$PROJECT_DIR$/loy-common/loy-common.iml" />
       <module fileurl="file://$PROJECT_DIR$/loy-consumer/loy-consumer.iml" filepath="$PROJECT_DIR$/loy-consumer/loy-consumer.iml" />
