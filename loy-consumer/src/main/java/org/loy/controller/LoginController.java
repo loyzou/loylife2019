@@ -9,10 +9,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/user/")
-public class LoginController{
+public class LoginController extends BaseController{
     @Autowired
     private ILoyApi iLoyApi;
 
+    /***
+     * 登录
+     * @return
+     */
     @RequestMapping("login")
     public LoyResult login(){
         LoyParam loyParam = new LoyParam("userService", "login");

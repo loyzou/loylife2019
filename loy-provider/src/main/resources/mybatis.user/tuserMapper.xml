@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper>
+<mapper namespace="USER">
     <!--获取用户信息-->
     <select id="queryUserInfo" parameterType="map" resultType="map">
         select t.userName,t.custId from t_cust t
+    </select>
+
+
+    <select id="queryOrderList" parameterType="map" resultType="map">
+        select * from t_order_info_dtl
     </select>
 </mapper>

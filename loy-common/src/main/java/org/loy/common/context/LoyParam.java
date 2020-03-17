@@ -1,6 +1,9 @@
 package org.loy.common.context;
 
+import org.springframework.util.StringUtils;
+
 import java.io.Serializable;
+import java.util.HashMap;
 import java.util.Map;
 
 /***
@@ -10,7 +13,7 @@ public class LoyParam implements Serializable {
     private String serviceName;
     private String method;
     private String database;
-    private Map<String,Object> attr;
+    private Map<String,Object> attr = new HashMap<>();
 
     public LoyParam(String serviceName, String method) {
         this.serviceName = serviceName;
@@ -42,6 +45,9 @@ public class LoyParam implements Serializable {
     }
 
     public String getDatabase() {
+        if(StringUtils.isEmpty(database)){
+            return "";
+        }
         return database;
     }
 

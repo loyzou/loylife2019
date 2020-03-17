@@ -1,5 +1,6 @@
 package org.loy.common.dao;
 
+import org.loy.common.context.LoyParam;
 import org.loy.common.context.LoyResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -34,6 +35,8 @@ public class BaseService {
         return result;
     }
 
+
+
     /***
      * 指定id查询
      * @param namespace
@@ -45,6 +48,23 @@ public class BaseService {
         LoyResult result = new LoyResult();
         List<Map<String,Object>> dataList = getDao().query(namespace,statement,database);
         result.setRows(dataList);
+        return result;
+    }
+
+    /***
+     * 默认query查询
+     * @param loyParam
+     * @param namespace
+     * @param statement
+     * @return
+     */
+    public LoyResult query(LoyParam loyParam,String namespace, String statement){
+        LoyResult result = new LoyResult();
+        if(loyParam.getAttr().size() == 0){
+            result.setRows(getDao().query(namespace,statement,loyParam.getDatabase()));
+        }else{
+            result.setRows(getDao().query(namespace,statement,loyParam.getAttr(),loyParam.getDatabase()));
+        }
         return result;
     }
 }

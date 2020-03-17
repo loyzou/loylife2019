@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 import javax.sql.DataSource;
@@ -16,6 +17,8 @@ import java.time.Duration;
 @Configuration
 @ConfigurationProperties(prefix = "loy.jdbc")
 public class DataSourceConfig {
+    static final String MAPPER_LOCATION = "classpath*:mybatis/**/*.xml";
+
     private String username;
     private String password;
     private String driverClass;
@@ -50,9 +53,12 @@ public class DataSourceConfig {
      *sqlSessionfactory
      */
     @Bean("sqlSessionFactory")
-    public SqlSessionFactoryBean getSqlSesssionFactory(DataSource dataSource){
+    public SqlSessionFactoryBean getSqlSesssionFactory(DataSource dataSource) throws Exception{
         SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
         sqlSessionFactoryBean.setDataSource(dataSource);
+        //配置扫描文件
+        sqlSessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver()
+                .getResources(DataSourceConfig.MAPPER_LOCATION));
         return sqlSessionFactoryBean;
     }
 
