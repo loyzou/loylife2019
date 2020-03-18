@@ -26,7 +26,7 @@ public class LoyInvokeImpl implements LoyInvoke {
             Method method = service.getClass().getMethod(params.getMethod(), new Class[]{LoyParam.class});
             result = (LoyResult) method.invoke(service,new Object[]{params});
         }catch (Exception e){
-            log.error("invoke fail" + e);
+            log.error("invoke fail" + e.getCause());
 
             // 回滚事务
 

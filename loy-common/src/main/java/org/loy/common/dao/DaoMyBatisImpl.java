@@ -28,7 +28,7 @@ public class DaoMyBatisImpl implements Dao {
     @Override
     public List<Map<String, Object>> query(String namespace, String statement, String database) {
         long startLongTime = System.currentTimeMillis();
-        List<Map<String,Object>> dataList = getDao(database).selectOne(getStatement(namespace,statement));
+        List<Map<String,Object>> dataList = getDao(database).selectList(getStatement(namespace,statement));
         log.info("["+namespace +"." + statement+"] execute,cost:" + (System.currentTimeMillis() - startLongTime) + "ms");
         return dataList;
     }
@@ -36,7 +36,7 @@ public class DaoMyBatisImpl implements Dao {
     @Override
     public List<Map<String, Object>> query(String namespace, String statement, Map<String,Object> params, String database) {
         long startLongTime = System.currentTimeMillis();
-        List<Map<String,Object>> dataList = getDao(database).selectOne(getStatement(namespace,statement), params);
+        List<Map<String,Object>> dataList = getDao(database).selectList(getStatement(namespace,statement), params);
         log.info("["+namespace +"." + statement+"] execute,cost:" + (System.currentTimeMillis() - startLongTime) + "ms");
         return dataList;
     }

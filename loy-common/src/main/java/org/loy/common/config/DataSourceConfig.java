@@ -1,6 +1,7 @@
 package org.loy.common.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
+import com.github.miemiedev.mybatis.paginator.OffsetLimitInterceptor;
 import lombok.extern.slf4j.Slf4j;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -59,9 +60,17 @@ public class DataSourceConfig {
         //配置扫描文件
         sqlSessionFactoryBean.setMapperLocations(new PathMatchingResourcePatternResolver()
                 .getResources(DataSourceConfig.MAPPER_LOCATION));
+        sqlSessionFactoryBean.setPlugins(new OffsetLimitInterceptor[] {
+                getOffsetLimitInterceptor()
+        });
         return sqlSessionFactoryBean;
     }
 
+    OffsetLimitInterceptor getOffsetLimitInterceptor() {
+        OffsetLimitInterceptor interceptor = new OffsetLimitInterceptor();
+        interceptor.setDialectClass("com.github.miemiedev.mybatis.paginator.dialect.MySQLDialect");
+        return interceptor;
+    }
 
     public String getUsername() {
         return username;
