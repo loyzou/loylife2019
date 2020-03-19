@@ -13,6 +13,7 @@ public class BaseService {
     private final String UPDATE = "update";
     private final String DELETE = "delete";
     private final String COUNT = "count";
+    private final String INSERT = "insert";
 
     @Autowired
     @Qualifier("daoMyBatisImpl")
@@ -79,6 +80,32 @@ public class BaseService {
         LoyResult result = new LoyResult();
         int updateSize = getDao().update(namespace,UPDATE,loyParam.getDatabase(),loyParam.getAttr());
         result.putAttr("updateSize",updateSize);
+        return result;
+    }
+
+    /***
+     * 更新
+     * @param loyParam
+     * @param namespace
+     * @return
+     */
+    public LoyResult insert(LoyParam loyParam,String namespace){
+        LoyResult result = new LoyResult();
+        int insertSize = getDao().insert(namespace,INSERT,loyParam.getDatabase(),loyParam.getAttr());
+        result.putAttr("insertSize",insertSize);
+        return result;
+    }
+
+    /***
+     * 删除
+     * @param loyParam
+     * @param namespace
+     * @return
+     */
+    public LoyResult delete(LoyParam loyParam,String namespace){
+        LoyResult result = new LoyResult();
+        int delSize = getDao().insert(namespace,DELETE,loyParam.getDatabase(),loyParam.getAttr());
+        result.putAttr("delSize",delSize);
         return result;
     }
 }

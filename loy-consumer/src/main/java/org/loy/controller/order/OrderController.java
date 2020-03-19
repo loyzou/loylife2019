@@ -53,4 +53,27 @@ public class OrderController extends BaseController {
         return loyResult;
     }
 
+    /***添加信息
+     *
+     * @return
+     */
+    @RequestMapping("addOrderInfo")
+    public LoyResult addOrderInfo(){
+        LoyParam loyParam = new LoyParam("orderService", "insert");
+        loyParam.addAttr("recName", "loy");
+        LoyResult loyResult = iLoyApi.call(loyParam);
+        return loyResult;
+    }
+
+    /***删除信息
+     *
+     * @return
+     */
+    @RequestMapping("delOrderInfo")
+    public LoyResult delOrderInfo(){
+        LoyParam loyParam = new LoyParam("orderService", "delete");
+        loyParam.addAttr("orderId", request.getParameter("orderId"));
+        LoyResult loyResult = iLoyApi.call(loyParam);
+        return loyResult;
+    }
 }

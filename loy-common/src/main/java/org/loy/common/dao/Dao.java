@@ -40,4 +40,14 @@ public interface Dao {
      */
     int update(String namespace,String statement,String database,Map<String,Object> params);
 
+    /***
+     * 插入
+     */
+    int insert(String namespace,String statement, String database ,Map<String,Object> params);
+
+    /***
+     * 删除
+     */
+    int delete(String namespace,String statement, String database ,Map<String,Object> params);
+
 }

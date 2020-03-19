@@ -7,6 +7,21 @@
         select * from t_order_info_dtl
     </select>
 
+    <insert id="insert" parameterType="map">
+        <selectKey resultType="long" keyProperty="ordreId">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into t_order_test(
+            createTime,
+            recName
+        )
+        values
+        (
+            #{createTime,jdbcType=TIMESTAMP},
+            #{recName, jdbcType=VARCHAR}
+        )
+    </insert>
+
     <update id="update" parameterType="map">
         update t_order_info_dtl
         <set>
@@ -22,4 +37,13 @@
         </where>
 
     </update>
+
+    <delete id="delete" parameterType="map">
+        delete from t_order_test
+        <where>
+            <if test="orderId !=null and orderId != ''">
+                orderId = #{orderId}
+            </if>
+        </where>
+    </delete>
 </mapper>
