@@ -1,5 +1,8 @@
 package org.loy.common.context;
 
+import com.alibaba.fastjson.serializer.SerializerFeature;
+import org.loy.common.util.JsonUtil;
+
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
@@ -16,6 +19,15 @@ public class LoyResult implements Serializable {
     private List<Map<String,Object>> rows;
 
     private Map<String,Object> attr = new HashMap<>();
+
+    public Map<String, Object> getAttr() {
+        return attr;
+    }
+
+    public void setAttr(Map<String, Object> attr) {
+        if(attr == null) return;
+        this.attr = attr;
+    }
 
     public boolean isSuccess() {
         return isSuccess;
@@ -48,4 +60,9 @@ public class LoyResult implements Serializable {
     public void setMessage(String message) {
         this.message = message;
     }
+
+    public String toJson(){
+        return JsonUtil.getInstance().object2JSON(this, SerializerFeature.WriteDateUseDateFormat);
+    }
+
 }
