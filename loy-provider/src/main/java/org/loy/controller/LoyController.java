@@ -20,6 +20,7 @@ public class LoyController implements ILoyApi {
 
     @RequestMapping("/call")
     public LoyResult call(@RequestBody LoyParam params) {
-        return null;
+        LoyResult loyResult = LoySoaManager.getInstance().invoke(params);
+        return loyResult;
     }
 }

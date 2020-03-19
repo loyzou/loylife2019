@@ -44,6 +44,14 @@ public class LoyParam implements Serializable {
         this.attr = attr;
     }
 
+    public void addAttr(String key, Object value){
+        this.attr.put(key,value);
+    }
+
+    public Object getAttr(String key){
+        return this.attr.get(key);
+    }
+
     public String getDatabase() {
         if(StringUtils.isEmpty(database)){
             return "";

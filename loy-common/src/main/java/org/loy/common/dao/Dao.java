@@ -31,4 +31,13 @@ public interface Dao {
      * @return
      */
     List<Map<String,Object>> query(String namespace, String statement, int limit, int offset, String database);
+
+    /***
+     * 更新
+     * @param namespace
+     * @param statement
+     * @return
+     */
+    int update(String namespace,String statement,String database,Map<String,Object> params);
+
 }

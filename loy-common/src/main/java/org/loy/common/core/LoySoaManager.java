@@ -53,7 +53,7 @@ public class LoySoaManager {
      * @param txType
      * @return
      */
-    public LoyResult call(LoyParam params, int txType){
+    private LoyResult call(LoyParam params, int txType){
         LoyResult result = new LoyResult();
         loyInvoke = LoySpringContext.getBean(LoyInvoke.class);
         result = loyInvoke.invoke(params);

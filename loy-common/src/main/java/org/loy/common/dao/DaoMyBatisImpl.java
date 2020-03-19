@@ -46,6 +46,15 @@ public class DaoMyBatisImpl implements Dao {
         return null;
     }
 
+
+    @Override
+    public int update(String namespace,String statement,String database,Map<String,Object> params){
+        long startLongTime = System.currentTimeMillis();
+        int updateSize = getDao(database).update(getStatement(namespace,statement),params);
+        log.info("["+namespace +"." + statement+"] execute,cost:" + (System.currentTimeMillis() - startLongTime) + "ms");
+        return updateSize;
+    }
+
     private String getStatement(String namespace, String statement){
         return namespace + "." + statement;
     }

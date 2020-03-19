@@ -6,7 +6,6 @@ import java.util.Map;
 
 public class LoyResult implements Serializable {
     public LoyResult(){
-
     }
 
     public String message;
@@ -14,6 +13,8 @@ public class LoyResult implements Serializable {
     private boolean isSuccess = true;
 
     private List<Map<String,Object>> rows;
+
+    private Map<String,Object> attr;
 
     public boolean isSuccess() {
         return isSuccess;
@@ -29,6 +30,14 @@ public class LoyResult implements Serializable {
 
     public void setRows(List<Map<String, Object>> rows) {
         this.rows = rows;
+    }
+
+    public void putAttr(String key, Object value){
+        this.attr.put(key,value);
+    }
+
+    public Object getAttr(String key){
+        return this.attr.get(key);
     }
 
     public String getMessage() {

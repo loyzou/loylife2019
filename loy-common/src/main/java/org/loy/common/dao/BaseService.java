@@ -67,4 +67,18 @@ public class BaseService {
         }
         return result;
     }
+
+
+    /***
+     * 更新
+     * @param loyParam
+     * @param namespace
+     * @return
+     */
+    public LoyResult update(LoyParam loyParam,String namespace){
+        LoyResult result = new LoyResult();
+        int updateSize = getDao().update(namespace,UPDATE,loyParam.getDatabase(),loyParam.getAttr());
+        result.putAttr("updateSize",updateSize);
+        return result;
+    }
 }

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Lazy
 @Service
 public class OrderService extends BaseService {
-    private final String NAMESPACE = "USER";
+    private final String NAMESPACE = "ORDERINFO";
 
     /***
      * 查询订单列表
@@ -18,5 +18,15 @@ public class OrderService extends BaseService {
      */
     public LoyResult queryOrderList(LoyParam params){
         return this.query(params,NAMESPACE,"queryOrderList");
+    }
+
+
+    /***
+     * 更新订单信息
+     * @param params
+     * @return
+     */
+    public LoyResult update(LoyParam params){
+        return super.update(params,NAMESPACE);
     }
 }

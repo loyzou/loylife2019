@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="ORDERINFO">
+
+    <select id="queryOrderList" parameterType="map" resultType="map">
+        select * from t_order_info_dtl
+    </select>
+
+    <update id="update" parameterType="map">
+        update t_order_info_dtl
+        <set>
+            <if test="orderStatus != null">
+                orderStatus = #{orderStatus}
+            </if>
+        </set>
+        <where>
+            <if test="orderNo != null and orderNo != ''">
+                orderNo = #{orderNo}
+            </if>
+
+        </where>
+
+    </update>
+</mapper>
