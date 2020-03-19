@@ -1,6 +1,7 @@
 package org.loy.common.context;
 
 import java.io.Serializable;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -14,7 +15,7 @@ public class LoyResult implements Serializable {
 
     private List<Map<String,Object>> rows;
 
-    private Map<String,Object> attr;
+    private Map<String,Object> attr = new HashMap<>();
 
     public boolean isSuccess() {
         return isSuccess;

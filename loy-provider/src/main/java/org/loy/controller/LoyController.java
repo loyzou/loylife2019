@@ -13,8 +13,7 @@ public class LoyController implements ILoyApi {
 
     @RequestMapping("/callNoTx")
     public LoyResult callNoTx(@RequestBody LoyParam params) {
-        LoyResult result = new LoyResult();
-        result = LoySoaManager.getInstance().callNoTx(params);
+        LoyResult result = LoySoaManager.getInstance().callNoTx(params);
         return result;
     }
 

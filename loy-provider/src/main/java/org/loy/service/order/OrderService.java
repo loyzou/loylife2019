@@ -1,5 +1,6 @@
 package org.loy.service.order;
 
+import com.sun.deploy.ref.AppRef;
 import org.loy.common.context.LoyParam;
 import org.loy.common.context.LoyResult;
 import org.loy.common.dao.BaseService;
@@ -27,6 +28,7 @@ public class OrderService extends BaseService {
      * @return
      */
     public LoyResult update(LoyParam params){
-        return super.update(params,NAMESPACE);
+        LoyResult result = super.update(params,NAMESPACE);
+        return result;
     }
 }
