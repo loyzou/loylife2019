@@ -1,0 +1,10 @@
+server:
+  port: 9070
+
+spring:
+  application:
+    name: loy-nacos-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: http:49.232.59.3:8848

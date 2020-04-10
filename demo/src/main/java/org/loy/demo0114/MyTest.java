@@ -8,6 +8,9 @@ public class MyTest {
         System.out.println(i);
     }
     public static void main(String[] args) {
-        testAdd();
+        //testAdd();
+
+        System.out.println(3/10);
+        System.out.println(3%10);
     }
 }
