@@ -1,7 +1,5 @@
 package org.loy.service.order;
 
-import com.sun.deploy.ref.AppRef;
-import org.loy.LoyProviderApplication;
 import org.loy.common.context.LoyParam;
 import org.loy.common.context.LoyResult;
 import org.loy.common.dao.BaseService;

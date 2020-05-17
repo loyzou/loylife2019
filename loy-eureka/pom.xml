@@ -19,11 +19,6 @@
 
     <dependencies>
 
-        <dependency>
-            <groupId>org.loy</groupId>
-            <artifactId>loylife</artifactId>
-            <version>1.0.0</version>
-        </dependency>
         <!--引入springcloud-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
