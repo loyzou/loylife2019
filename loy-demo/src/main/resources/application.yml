@@ -1,0 +1,9 @@
+server:
+  port: 8091
+
+loy:
+  name: loyName
+  life: 生活尚且
+
+  config:
+    name: loyConfigName

@@ -1,4 +1,4 @@
-package org.loy.demo0109;
+package org.loy.concurrent;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;

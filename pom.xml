@@ -27,6 +27,7 @@
         <module>loy-provider</module>
         <module>loy-eureka</module>
         <module>loy-job-listener</module>
+        <module>loy-demo</module>
     </modules>
 
     <dependencies>
