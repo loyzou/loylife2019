@@ -12,7 +12,10 @@ import org.springframework.beans.factory.support.RootBeanDefinition;
 import org.springframework.stereotype.Component;
 
 /**
- * 功能说明
+ * BeanDefinitionRegistryPostProcessor类的demo
+ * 用于熟悉BeanDefinitionRegistryPostProcessor类的作用
+ * 实现该类会覆盖两个方法，postProcessBeanDefinitionRegistry可以用于动态添加bean
+ * postProcessBeanFactory可以用于处理bean之后的后续操作
  *
  * @author Loy
  * @version 1.0.0
