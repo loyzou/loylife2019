@@ -7,3 +7,21 @@ loy:
 
   config:
     name: loyConfigName
+
+  ## 自定义配置数据库连接信息
+  data:
+    url: jdbc:mysql://49.232.59.3:3306/loy?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: loy
+    password: loy123456
+
+
+## 配置数据库连接（spring自带配置）
+#spring:
+#  datasource:
+#    url: jdbc:mysql://49.232.59.3:3306/loy?characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+#    username: loy
+#    password: loy123456
+
+#mybatis扫描文件配置
+#mybatis:
+#  config-location: classpath*:mybatis/**/*.xml

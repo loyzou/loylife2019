@@ -18,7 +18,7 @@
   <name>loy-demo</name>
 
   <properties>
-
+    <mybatis.version>2.0.1</mybatis.version>
   </properties>
 
   <dependencies>
@@ -30,6 +30,27 @@
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-actuator</artifactId>
+    </dependency>
+
+
+    <!-- 引入mybatis-->
+    <dependency>
+      <groupId>org.mybatis.spring.boot</groupId>
+      <artifactId>mybatis-spring-boot-starter</artifactId>
+      <version>${mybatis.version}</version>
+    </dependency>
+
+    <!--mysql-->
+    <dependency>
+      <groupId>mysql</groupId>
+      <artifactId>mysql-connector-java</artifactId>
+    </dependency>
+
+    <!--数据库连接池-->
+    <dependency>
+      <groupId>com.alibaba</groupId>
+      <artifactId>druid</artifactId>
+      <version>1.1.14</version>
     </dependency>
 
     <dependency>
