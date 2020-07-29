@@ -11,7 +11,7 @@ package org.loy.thread_demo;
  * @date 2020/7/28
  */
 public class InterruptedDemo1 extends Thread {
-    private static boolean isInterrupted = false;
+    private static volatile boolean isInterrupted = false;
 
     @Override
     public void run() {
@@ -20,6 +20,7 @@ public class InterruptedDemo1 extends Thread {
             System.out.println("线程执行中。。。。。。");
             Thread.yield();
         }
+        System.out.println("线程中断");
 
     }
 
