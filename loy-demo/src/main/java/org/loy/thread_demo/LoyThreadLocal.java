@@ -1,5 +1,5 @@
 /*
- * 深圳市灵智数科有限公司版权所有.
+ * 深圳市Loy有限公司版权所有.
  */
 package org.loy.thread_demo;
 
@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * ThreadLocalDemo
  *
- * @author 邹全洪
+ * @author Loy
  * @version 1.0.0
  * @date 2020/7/28
  */

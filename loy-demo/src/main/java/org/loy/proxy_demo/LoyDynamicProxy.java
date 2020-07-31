@@ -1,5 +1,5 @@
 /*
- * 深圳市灵智数科有限公司版权所有.
+ * 深圳市Loy有限公司版权所有.
  */
 package org.loy.proxy_demo;
 
@@ -12,7 +12,7 @@ import java.lang.reflect.Proxy;
 /**
  * 动态代理
  *
- * @author 邹全洪
+ * @author Loy
  * @version 1.0.0
  * @date 2020/7/29
  */

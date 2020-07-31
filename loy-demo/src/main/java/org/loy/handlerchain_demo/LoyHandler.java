@@ -1,5 +1,5 @@
 /*
- * 深圳市灵智数科有限公司版权所有.
+ * 深圳市Loy有限公司版权所有.
  */
 package org.loy.handlerchain_demo;
 
@@ -8,7 +8,7 @@ package org.loy.handlerchain_demo;
  * 责任链模式
  * 责任链模式为：如果自己能处理则自己处理，否则交给转交对象处理
  *
- * @author 邹全洪
+ * @author Loy
  * @version 1.0.0
  * @date 2020/7/28
  */

@@ -1,5 +1,5 @@
 /*
- * 深圳市灵智数科有限公司版权所有.
+ * 深圳市Loy有限公司版权所有.
  */
 package org.loy.protoype_demo;
 
@@ -15,7 +15,7 @@ package org.loy.protoype_demo;
  * 【4】 实现
  *     (1) 实现Cloneable 接口，重写clone()方法
  *
- * @author 邹全洪
+ * @author Loy
  * @version 1.0.0
  * @date 2020/7/28
  */

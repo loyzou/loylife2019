@@ -1,5 +1,5 @@
 /*
- * 深圳市灵智数科有限公司版权所有.
+ * 深圳市Loy有限公司版权所有.
  */
 package org.loy.thread_demo;
 
@@ -17,7 +17,7 @@ import lombok.extern.slf4j.Slf4j;
  *
  *  <3> synchronize(自定义对象) 不同对象或同一对象访问均为同步，如果自定义对象不一样，则为异步。
  *
- * @author 邹全洪
+ * @author Loy
  * @version 1.0.0
  * @date 2020/7/29
  */
