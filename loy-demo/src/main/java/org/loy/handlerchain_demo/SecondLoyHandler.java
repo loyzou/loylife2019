@@ -12,6 +12,7 @@ package org.loy.handlerchain_demo;
  */
 public class SecondLoyHandler extends LoyHandler {
     private final int LEVEL = 2;
+    @Override
     public int getLevel() {
         System.out.println("进入" + LEVEL + "获取当前LEVEL");
         return LEVEL;
