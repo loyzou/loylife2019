@@ -12,7 +12,7 @@ import java.util.stream.Collectors;
 /**
  * FunctionIdentify的使用
  *
- * @author 邹全洪
+ * @author Loy
  * @version 1.0.0
  * @date 2020/9/3
  */
