@@ -3,8 +3,6 @@
  */
 package org.loy.proxy_demo;
 
-import com.sun.deploy.net.proxy.DynamicProxyManager;
-
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;

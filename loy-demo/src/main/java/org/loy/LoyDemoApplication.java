@@ -15,8 +15,8 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
  * @version 1.0.0
  * @date 2020/7/22
  */
-//@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
-@SpringBootApplication()
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+//@SpringBootApplication()
 @MapperScan(basePackages = {"org.loy.mapper"})
 public class LoyDemoApplication {
     public static void main(String[] args) {
