@@ -3,10 +3,15 @@
  */
 package org.loy;
 
+import org.loy.spring.bean.LoyBeanLoadDemo;
 import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.beans.factory.support.BeanDefinitionReader;
+import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.core.io.ClassPathResource;
 
 /**
  * loy-demo入口类

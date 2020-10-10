@@ -1,7 +1,7 @@
 /*
  * 深圳市Loy有限公司版权所有.
  */
-package org.loy.beanlife;
+package org.loy.spring.bean;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.*;

@@ -25,7 +25,7 @@ public class TwoSumDemo {
         // 而当 index = 3 时 ，此时当前的值为8，目标值为11 则预期获取的值为3，此时3的值之前已经加入到map中，所以可以获取到对象的值
 
 
-        int index [] = new int[]{0,0};
+        int[] index = new int[]{0,0};
         Map<Integer, Integer> resultMap = new HashMap<>();
         for (int i = 0; i < arrays.length; i++) {
             // 设置当前的值相加的目标值等于最终目标值
@@ -44,7 +44,7 @@ public class TwoSumDemo {
     }
 
     public static void main(String[] args) {
-        int index[] = testSum(11);
+        int[] index = testSum(11);
         System.out.println(Arrays.toString(index));
     }
 }

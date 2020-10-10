@@ -1,7 +1,7 @@
 /*
  * 深圳市Loy有限公司版权所有.
  */
-package org.loy.postprocessor;
+package org.loy.spring.postprocessor;
 
 import org.loy.common.NoComponentLoyCommBean;
 import org.springframework.beans.BeansException;
